@@ -1,0 +1,382 @@
+# Instincts generated from https://github.com/b08x/docs2db-api
+# Generated: 2026-06-08T16:01:26.923Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: docs2db-api-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/b08x/docs2db-api
+---
+
+# Docs2db Api Commit Length
+
+## Action
+
+Write moderate-length commit messages (~55 characters)
+
+## Evidence
+
+- Average commit message length: 55 chars
+- Based on 4 commits
+
+---
+id: docs2db-api-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/docs2db-api
+---
+
+# Docs2db Api Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: docs2db-api-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/docs2db-api
+---
+
+# Docs2db Api Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: docs2db-api-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/docs2db-api
+---
+
+# Docs2db Api Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: docs2db-api-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/b08x/docs2db-api
+---
+
+# Docs2db Api Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: docs2db-api-workflow-dependency-update-with-lockfile
+trigger: "when doing dependency update with lockfile"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/docs2db-api
+---
+
+# Docs2db Api Workflow Dependency Update With Lockfile
+
+## Action
+
+Follow the dependency-update-with-lockfile workflow:
+1. Update dependency versions in pyproject.toml
+2. Regenerate uv.lock lockfile
+3. Update CI workflow if necessary
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: pyproject.toml, uv.lock, .github/workflows/ci.yml
+
+---
+id: docs2db-api-workflow-lockfile-maintenance
+trigger: "when doing lockfile maintenance"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/docs2db-api
+---
+
+# Docs2db Api Workflow Lockfile Maintenance
+
+## Action
+
+Follow the lockfile-maintenance workflow:
+1. Regenerate or update uv.lock lockfile
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: uv.lock
+
+---
+id: docs2db-api-instinct-camelcase-files
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Camelcase Files
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files: camelCase
+
+---
+id: docs2db-api-instinct-camelcase-functions
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Camelcase Functions
+
+## Action
+
+Name the function using camelCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions: camelCase
+
+---
+id: docs2db-api-instinct-pascalcase-classes
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Pascalcase Classes
+
+## Action
+
+Name the class using PascalCase convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes: PascalCase
+
+---
+id: docs2db-api-instinct-screaming-constants
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Screaming Constants
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE convention
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: docs2db-api-instinct-relative-imports
+trigger: "When importing modules within the project"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Relative Imports
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle: relative
+
+---
+id: docs2db-api-instinct-named-exports
+trigger: "When exporting functions, classes, or constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle: named
+
+---
+id: docs2db-api-instinct-test-location-separate
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Test Location Separate
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: docs2db-api-instinct-git-commit-prefix-fix
+trigger: "When committing a bug fix or dependency update"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Git Commit Prefix Fix
+
+## Action
+
+Prefix the commit message with 'fix' (e.g., fix(deps): ...)
+
+## Evidence
+
+- Seen in commit: fix(deps): update all non-major dependencies
+
+---
+id: docs2db-api-instinct-git-commit-prefix-chore
+trigger: "When committing maintenance or non-feature changes"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Git Commit Prefix Chore
+
+## Action
+
+Prefix the commit message with 'chore' (e.g., chore(deps): ...)
+
+## Evidence
+
+- Seen in commit: chore(deps): lock file maintenance
+
+---
+id: docs2db-api-instinct-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 55 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 55
+
+---
+id: docs2db-api-instinct-dependency-update-workflow
+trigger: "When someone wants to update dependencies to their latest non-major versions"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Dependency Update Workflow
+
+## Action
+
+Update dependency versions in pyproject.toml, regenerate uv.lock, and update CI workflow if necessary
+
+## Evidence
+
+- Workflow: dependency-update-with-lockfile
+- Commits: fix(deps): update all non-major dependencies, chore(deps): lock file maintenance
+
+---
+id: docs2db-api-instinct-lockfile-maintenance-workflow
+trigger: "When someone wants to ensure the lockfile reflects the current dependency state"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: b08x/docs2db-api
+---
+
+# Docs2db Api Instinct Lockfile Maintenance Workflow
+
+## Action
+
+Regenerate or update uv.lock lockfile
+
+## Evidence
+
+- Workflow: lockfile-maintenance
+- Commit: chore(deps): lock file maintenance
+
